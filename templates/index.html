@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+     <head>
+          <meta charset="utf-8">
+          <title>Pets</title>
+     </head>
+     <body>
+          <h1>All the Pets</h1>
+          <table>
+               <thead>
+                    <tr>
+                         <th>id</th>
+                         <th>Name</th>
+                         <th>Type</th>
+                    </tr>
+               </thead>
+               <tbody>
+                    {%for pet in pets%}
+                    <tr>
+                         <td>{{pet['id']}}</td>
+                         <td>{{pet['name']}}</td>
+                         <td>{{pet['type']}}</td>
+                    </tr>
+                    {%endfor%}
+               </tbody>
+          </table>
+          <h1>Add a Pet</h1>
+          <form class="" action="/create_pet" method="post">
+               <label for="name">NAME</label>
+               <input type="text" name="name" value="">
+               <label for="type">Type</label>
+               <input type="text" name="type" value="">
+               <input type="submit" value="ADD PET">
+          </form>
+
+     </body>
+</html>
